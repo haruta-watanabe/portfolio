@@ -1,14 +1,15 @@
 ---
 const { id } = Astro.props;
+const isProd = import.meta.env.PROD;
 ---
 {id && (
-  <script define:vars={{ id }}>
+  <script define:vars={{ id, isProd }}>
     window.initializeGA = function() {
       if (window.gaInitialized) {
         return;
       }
 
-      if (import.meta.env.PROD) {
+      if (isProd) {
         const script = document.createElement('script');
         script.async = true;
         script.src = `https://www.googletagmanager.com/gtag/js?id=${id}`;
@@ -22,6 +23,7 @@ const { id } = Astro.props;
         gtag("config", id);
 
         window.gaInitialized = true;
+      } else {
       }
     };
   </script>
