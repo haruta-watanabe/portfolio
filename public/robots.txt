@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://harutawatanabe.com/sitemap-index.xml

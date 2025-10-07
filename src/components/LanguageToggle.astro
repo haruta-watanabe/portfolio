@@ -1,0 +1,36 @@
+---
+const { lang } = Astro.props;
+
+const otherLang = lang === "ja" ? "en" : "ja";
+
+const currentPathWithoutLang = Astro.url.pathname.replace(`/${lang}/`, "/");
+const otherLangPath = `/${otherLang}${currentPathWithoutLang}`;
+---
+
+<div class="text-sm font-medium">
+  {
+    lang === "ja" ? (
+      <>
+        <span class="text-gray-900 dark:text-white">JA</span>
+        <span> / </span>
+        <a
+          href={otherLangPath}
+          class="text-gray-500 dark:text-gray-400 hover:underline"
+        >
+          EN
+        </a>
+      </>
+    ) : (
+      <>
+        <a
+          href={otherLangPath}
+          class="text-gray-500 dark:text-gray-400 hover:underline"
+        >
+          JA
+        </a>
+        <span> / </span>
+        <span class="text-gray-900 dark:text-white">EN</span>
+      </>
+    )
+  }
+</div>

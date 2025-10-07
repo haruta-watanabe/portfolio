@@ -1,0 +1,130 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { Image } from "astro:assets";
+import me from "../../assets/me.png";
+import Contact from "../../components/Contact.astro";
+const lang = "ja";
+---
+
+<BaseLayout>
+  <div class="container mx-auto px-4 py-12 max-w-4xl">
+    <header
+      class="flex flex-col md:flex-row justify-between items-center mb-12 gap-8"
+    >
+      <div class="flex items-center gap-6">
+        <Image
+          src={me}
+          alt="Haruta Watanabe"
+          class="rounded-full w-24 h-24 object-cover shadow-md"
+        />
+        <div>
+          <h1 class="text-3xl md:text-4xl font-bold">
+            渡邉 朝太 (Haruta Watanabe)
+          </h1>
+          <p class="text-lg text-gray-600 dark:text-gray-300 mt-1">
+            未来のデータサイエンティスト
+          </p>
+        </div>
+      </div>
+      <a
+        href="/resume.pdf"
+        target="_blank"
+        class="bg-sky-600 hover:bg-sky-700 text-white font-bold py-3 px-6 rounded-lg transition-colors inline-flex items-center flex-shrink-0"
+        download
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-5 w-5 mr-2"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          ><path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
+          ></path>
+        </svg>
+        PDFをダウンロード
+      </a>
+    </header>
+
+    <div class="prose dark:prose-invert max-w-none">
+      <h2>サマリー</h2>
+      <p>AIや機械学習に強い関心を持つ法学部の学生です。</p>
+      <p>
+        知人の会社でのアプリケーション開発や、個人でのアプリ開発を通じて、プログラミングスキルを磨いてきました。
+      </p>
+      <p>
+        AI駆動での開発を主として行っていたため、AIやデータサイエンス、機械学習に対する興味が深まり、学習を開始しました。
+      </p>
+      <p>
+        現在学習中の身ではありますが、Python、SQL、機械学習ライブラリの知識を活かし、価値あるインサイトを提供することに貢献します。
+      </p>
+
+      <hr />
+
+      <h2>職務経歴</h2>
+      <div class="mb-6">
+        <h3>和丘株式会社 (2024年4月 – 現在)</h3>
+        <p class="font-medium">アプリケーション開発 (アルバイト)</p>
+        <ul>
+          <li>各種システム開発の支援を行う。</li>
+          <li>
+            SQLを用いたデータ抽出や、Python、Java等でのシステム構築、HTML/CSS/JSを用いたMOCK作成を担当。
+          </li>
+        </ul>
+      </div>
+      <div class="mb-6">
+        <h3>Choco Next Year For Sure (2025年6月 – 現在)</h3>
+        <p class="font-medium">アプリケーション開発</p>
+        <ul>
+          <li>ゲームや日常を豊かにするアプリケーションを開発。</li>
+          <li>
+            主にFlutterとFirebaseを用いて、クロスプラットフォーム対応のアプリを構築。
+          </li>
+        </ul>
+      </div>
+
+      <hr />
+
+      <h2>学歴</h2>
+      <div>
+        <h3>中央大学 法学部 法律学科 (2028年3月 卒業予定)</h3>
+      </div>
+
+      <hr />
+
+      <h2>スキル</h2>
+      <ul>
+        <li>
+          <strong>Languages:</strong> Python, SQL, Java, Dart, JavaScript, HTML,
+          CSS
+        </li>
+        <li>
+          <strong>Libraries & Frameworks:</strong> Django, Flutter, Tailwind CSS,
+          Astro, Node.js
+        </li>
+        <li>
+          <strong>Tools & Platforms:</strong> Git, GitHub, GitHub Copilot, Firebase,
+          Google Gemini
+        </li>
+        <li>
+          <strong>Next to Learn:</strong> NumPy, PyTorch, TensorFlow, Pandas, Scikit-learn,
+          Docker, AWS
+        </li>
+      </ul>
+      <hr />
+      <Contact lang={lang} />
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .prose h2 {
+    @apply text-2xl font-bold mb-4 border-b border-gray-200 dark:border-gray-700 pb-2;
+  }
+  .prose h3 {
+    @apply text-xl font-semibold;
+  }
+</style>

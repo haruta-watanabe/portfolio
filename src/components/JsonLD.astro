@@ -1,0 +1,42 @@
+---
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Haruta Watanabe",
+  url: "https://harutawatanabe.com",
+  image: "https://harutawatanabe.com/profile-photo.png",
+  jobTitle: "Data Scientist / Developer / Engineer / Student",
+  alumniOf: {
+    "@type": "CollegeOrUniversity",
+    name: "Chuo University",
+  },
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Tokyo",
+    addressCountry: "JP",
+  },
+  sameAs: [
+    "https://github.com/haruta-watanabe",
+    "https://www.linkedin.com/in/haruta-watanabe/",
+  ],
+  knowsAbout: [
+    "Python",
+    "SQL",
+    "Java",
+    "Dart",
+    "JavaScript",
+    "HTML",
+    "CSS",
+    "Django",
+    "Flutter",
+    "Tailwind CSS",
+    "Astro",
+    "Node.js",
+    "Git",
+    "GitHub",
+    "Firebase",
+  ],
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(personSchema)} />

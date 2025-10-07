@@ -1,0 +1,28 @@
+---
+import { ui } from "../data/ui.ts";
+
+interface Props {
+  lang: keyof typeof ui;
+}
+const { lang = "ja" } = Astro.props;
+const t = ui[lang];
+---
+
+<section id="about" class="py-20">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-12">About Me</h2>
+    <div
+      class="max-w-3xl mx-auto text-center text-gray-600 dark:text-gray-300 space-y-4 leading-relaxed"
+    >
+      <p>
+        {t["about.description.1"]}
+      </p>
+      <p>
+        {t["about.description.2"]}
+      </p>
+      <p>
+        {t["about.description.3"]}
+      </p>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,29 @@
+---
+import { getCollection, type CollectionEntry } from "astro:content";
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+export async function getStaticPaths() {
+  const legalPages = await getCollection("legal", ({ id }) =>
+    id.startsWith("ja/")
+  );
+  return legalPages.map((page) => ({
+    params: { slug: page.slug.replace("ja/", "") },
+    props: { page },
+  }));
+}
+
+type Props = {
+  page: CollectionEntry<"legal">;
+};
+const { page } = Astro.props;
+const { Content } = await page.render();
+---
+
+<BaseLayout>
+  <article class="container mx-auto px-4 py-12 max-w-3xl">
+    <h1 class="text-4xl font-bold mb-8">{page.data.title}</h1>
+    <div class="prose dark:prose-invert max-w-none">
+      <Content />
+    </div>
+  </article>
+</BaseLayout>

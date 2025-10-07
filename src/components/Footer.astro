@@ -1,0 +1,45 @@
+---
+import { ui } from "../data/ui.ts";
+const year = new Date().getFullYear();
+interface Props {
+  id?: string;
+  lang: keyof typeof ui;
+}
+const { id, lang = "ja" } = Astro.props;
+const t = ui[lang];
+const formUrl = lang === "ja" ? "https://forms.gle/ceRWUNZjinac3o7R7" : "https://forms.gle/K1wKwsxXtEEWg9K17";
+---
+
+<footer id={id} class="py-8 border-t border-gray-200 dark:border-gray-800">
+  <div class="container mx-auto px-4 text-center text-gray-500">
+    <nav class="flex justify-center gap-x-6 mb-4">
+      <a
+        href={`/${lang}/legal/privacy-policy`}
+        class="hover:text-gray-900 dark:hover:text-white transition-colors"
+        >{t["legal.privacy-policy"]}</a
+      >
+      <a
+        href={`/${lang}/legal/terms-of-service`}
+        class="hover:text-gray-900 dark:hover:text-white transition-colors"
+        >{t["legal.terms-of-service"]}</a
+      >
+      <a
+        href={`/${lang}/legal/external-transmission-policy`}
+        class="hover:text-gray-900 dark:hover:text-white transition-colors"
+        >{t["legal.external-transmission-policy"]}</a
+      >
+      <a
+        href={`/${lang}/legal/licenses`}
+        class="hover:text-gray-900 dark:hover:text-white transition-colors"
+        >{t["legal.licenses"]}</a
+      >
+      <a
+        href={formUrl}
+        target="_blank"
+        class="hover:text-gray-900 dark:hover:text-white transition-colors"
+        >{t["legal.form"]}</a
+      >
+    </nav>
+    <p>&copy; {year} Haruta Watanabe. All rights reserved.</p>
+  </div>
+</footer>
