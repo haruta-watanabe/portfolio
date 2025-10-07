@@ -1,0 +1,140 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { Image } from "astro:assets";
+import me from "../../assets/me.png";
+import Contact from "../../components/Contact.astro";
+const lang = "en";
+---
+
+<BaseLayout>
+  <div class="container mx-auto px-4 py-12 max-w-4xl">
+    <header
+      class="flex flex-col md:flex-row justify-between items-center mb-12 gap-8"
+    >
+      <div class="flex items-center gap-6">
+        <Image
+          src={me}
+          alt="Haruta Watanabe"
+          class="rounded-full w-24 h-24 object-cover shadow-md"
+        />
+        <div>
+          <h1 class="text-3xl md:text-4xl font-bold">
+            Haruta Watanabe (渡邉 朝太)
+          </h1>
+          <p class="text-lg text-gray-600 dark:text-gray-300 mt-1">
+            Future Data Scientist
+          </p>
+        </div>
+      </div>
+      <a
+        href="/resume.pdf"
+        target="_blank"
+        class="bg-sky-600 hover:bg-sky-700 text-white font-bold py-3 px-6 rounded-lg transition-colors inline-flex items-center flex-shrink-0"
+        download
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-5 w-5 mr-2"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          ><path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
+          ></path>
+        </svg>
+        Download PDF
+      </a>
+    </header>
+
+    <div class="prose dark:prose-invert max-w-none">
+      <h2>Summary</h2>
+      <p>
+        I am a law student with a strong interest in AI and machine learning.
+      </p>
+      <p>
+        I have been honing my programming skills through application development
+        at a friend's company and personal app development.
+      </p>
+      <p>
+        Since I have primarily engaged in AI-driven development, my interest in
+        AI, data science, and machine learning has deepened, prompting me to
+        start learning.
+      </p>
+      <p>
+        While I am still in the learning phase, I am committed to leveraging my
+        knowledge of Python, SQL, and machine learning libraries to contribute
+        valuable insights.
+      </p>
+
+      <hr />
+
+      <h2>Work Experience</h2>
+      <div class="mb-6">
+        <h3>Wakyu Co., Ltd. (April 2024 – present)</h3>
+        <p class="font-medium">Application Development (Part-time)</p>
+        <ul>
+          <li>Assisting in various system development projects.</li>
+          <li>
+            Responsible for data extraction using SQL, system construction using
+            Python and Java, and mock creation using HTML/CSS/JS.
+          </li>
+        </ul>
+      </div>
+      <div class="mb-6">
+        <h3>Choco Next Year For Sure (June 2025 – present)</h3>
+        <p class="font-medium">Application Development</p>
+        <ul>
+          <li>Developing applications that enrich games and daily life.</li>
+          <li>
+            Mainly building cross-platform apps using Flutter and Firebase.
+          </li>
+        </ul>
+      </div>
+
+      <hr />
+
+      <h2>Educational background</h2>
+      <div>
+        <h3>
+          Chuo University, Faculty of Law (Expected graduation: March 2028)
+        </h3>
+      </div>
+
+      <hr />
+
+      <h2>Skills</h2>
+      <ul>
+        <li>
+          <strong>Languages:</strong> Python, SQL, Java, Dart, JavaScript, HTML,
+          CSS
+        </li>
+        <li>
+          <strong>Libraries & Frameworks:</strong> Django, Flutter, Tailwind CSS,
+          Astro, Node.js
+        </li>
+        <li>
+          <strong>Tools & Platforms:</strong> Git, GitHub, GitHub Copilot, Firebase,
+          Google Gemini
+        </li>
+        <li>
+          <strong>Next to Learn:</strong> NumPy, PyTorch, TensorFlow, Pandas, Scikit-learn,
+          Docker, AWS
+        </li>
+      </ul>
+      <hr />
+      <Contact lang={lang} />
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .prose h2 {
+    @apply text-2xl font-bold mb-4 border-b border-gray-200 dark:border-gray-700 pb-2;
+  }
+  .prose h3 {
+    @apply text-xl font-semibold;
+  }
+</style>

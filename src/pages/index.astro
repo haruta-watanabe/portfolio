@@ -1,0 +1,93 @@
+---
+import { ui } from "../data/ui.ts";
+import "../styles/global.css";
+import Analytics from "../components/Analytics.astro";
+
+const ja = ui.ja;
+const en = ui.en;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>Redirecting...</title>
+
+    <script is:inline>
+      (function () {
+        const stored = localStorage.getItem("theme");
+        const prefersDark =
+          window.matchMedia &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches;
+        const useDark = stored === "dark" || (stored === null && prefersDark);
+        document.documentElement.classList.toggle("dark", useDark);
+      })();
+    </script>
+
+    <noscript>
+      <meta http-equiv="refresh" content="0;url=/en/" />
+      <style>
+        #fallback-en {
+          display: block !important;
+        }
+      </style>
+    </noscript>
+    <Analytics id={import.meta.env.PUBLIC_GA_ID} />
+  </head>
+  <body
+    class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 flex items-center justify-center min-h-screen"
+  >
+    <div class="text-center p-8">
+      <div id="fallback-ja" class="hidden">
+        <h1 class="text-2xl font-bold">{ja["redirect.body"]}</h1>
+        <p class="mt-4 text-gray-600 dark:text-gray-300">
+          {ja["redirect.links.pre"]}
+          <a href="/ja/" class="text-sky-600 dark:text-sky-400 hover:underline"
+            >{ja["redirect.links.ja"]}</a
+          >
+          {ja["redirect.links.post"]}
+          <a href="/en/" class="text-sky-600 dark:text-sky-400 hover:underline"
+            >{ja["redirect.links.en"]}</a
+          >
+          {ja["redirect.links.end"]}
+        </p>
+      </div>
+      <div id="fallback-en" class="hidden">
+        <h1 class="text-2xl font-bold">{en["redirect.body"]}</h1>
+        <p class="mt-4 text-gray-600 dark:text-gray-300">
+          {en["redirect.links.pre"]}
+          <a href="/en/" class="text-sky-600 dark:text-sky-400 hover:underline"
+            >{en["redirect.links.en"]}</a
+          >
+          {en["redirect.links.post"]}
+          <a href="/ja/" class="text-sky-600 dark:text-sky-400 hover:underline"
+            >{en["redirect.links.ja"]}</a
+          >
+          {en["redirect.links.end"]}
+        </p>
+      </div>
+    </div>
+
+    <script>
+      const userLang = navigator.language || "en";
+      let targetLang = "en";
+
+      if (userLang.startsWith("ja")) {
+        targetLang = "ja";
+      }
+
+      document.documentElement.lang = targetLang;
+      document.title =
+        targetLang === "ja" ? "リダイレクト中..." : "Redirecting...";
+
+      const fallbackElement = document.getElementById(`fallback-${targetLang}`);
+      if (fallbackElement) {
+        fallbackElement.classList.remove("hidden");
+      }
+
+      window.location.href = `/${targetLang}/`;
+    </script>
+  </body>
+</html>

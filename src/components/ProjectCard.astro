@@ -1,0 +1,37 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+  project: CollectionEntry<"projects">;
+}
+
+const { project } = Astro.props;
+const projectSlug = project.slug.replace(/^(en|ja)\//, "");
+const lang = project.slug.startsWith("en") ? "en" : "ja";
+---
+
+<a
+  href={`/${lang}/projects/${projectSlug}`}
+  class="bg-white dark:bg-gray-900 rounded-lg shadow-lg overflow-hidden group transition-transform hover:-translate-y-2 block"
+>
+  <img
+    src={project.data.img}
+    alt={project.data.img_alt ?? ""}
+    class="w-full h-48 object-cover"
+  />
+  <div class="p-6">
+    <h3 class="text-xl font-bold mb-2">{project.data.title}</h3>
+    <p class="text-gray-600 dark:text-gray-300 mb-4">
+      {project.data.description}
+    </p>
+    <div class="flex flex-wrap gap-2">
+      {
+        project.data.tags.map((tag) => (
+          <span class="bg-sky-100 text-sky-800 text-xs font-medium px-2.5 py-0.5 rounded-full dark:bg-sky-900 dark:text-sky-300">
+            {tag}
+          </span>
+        ))
+      }
+    </div>
+  </div>
+</a>

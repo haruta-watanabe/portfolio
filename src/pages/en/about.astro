@@ -1,0 +1,30 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Contact from '../../components/Contact.astro';
+
+const lang = "en";
+---
+
+<BaseLayout>
+  <section id="about" class="py-20">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12">About Me</h2>
+      <div
+        class="max-w-3xl mx-auto text-center text-gray-600 dark:text-gray-300 space-y-4 leading-relaxed"
+      >
+        <p>
+          I am a student passionate about data science and software engineering. I aim to acquire and utilise skills in data analysis, machine learning, and programming to solve real-world problems.
+        </p>
+        <p>
+          I have experience in application development using programming languages such as Python, SQL, and Dart. I am also skilled in teamwork and communication.
+        </p>
+        <p>
+          In the future, I aim to support AI development and corporate decision-making as a data scientist and engineer, delivering valuable insights. I continually pursue self-improvement by learning new technologies and methodologies.
+        </p>
+        <a href="/en/resume" class="inline-block mt-8 text-blue-500 hover:underline font-bold">View my detailed resume here.</a>
+        <hr />
+        <Contact lang={lang} />
+      </div>
+    </div>
+  </section>
+</BaseLayout>

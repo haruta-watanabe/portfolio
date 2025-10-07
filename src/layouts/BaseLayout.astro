@@ -1,0 +1,63 @@
+---
+import "../styles/global.css";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import CookieConsent from "../components/CookieConsent.astro";
+import Analytics from "../components/Analytics.astro";
+import JsonLD from '../components/JsonLD.astro';
+const lang = Astro.url.pathname.startsWith("/en") ? "en" : "ja";
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>Haruta Watanabe's Portfolio</title>
+    <script is:inline>
+      (function () {
+        const stored = localStorage.getItem("theme");
+        const prefersDark =
+          window.matchMedia &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches;
+        const useDark = stored === "dark" || (stored === null && prefersDark);
+        document.documentElement.classList.toggle("dark", useDark);
+      })();
+    </script>
+    <JsonLD />
+    <Analytics id={import.meta.env.PUBLIC_GA_ID} />
+  </head>
+
+  <body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+    <Header id="main-header" lang={lang} />
+    <main class="container mx-auto px-4 py-8">
+      <slot />
+    </main>
+
+    <Footer id="main-footer" lang={lang} />
+    <CookieConsent lang={lang} />
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const btn = document.getElementById("theme-toggle");
+        const lightIcon = document.getElementById("theme-toggle-light-icon");
+        const darkIcon = document.getElementById("theme-toggle-dark-icon");
+
+        if (!btn || !lightIcon || !darkIcon) return;
+
+        const isDarkInitially =
+          document.documentElement.classList.contains("dark");
+        lightIcon.classList.toggle("hidden", !isDarkInitially);
+        darkIcon.classList.toggle("hidden", isDarkInitially);
+
+        btn.addEventListener("click", () => {
+          const isDark = document.documentElement.classList.toggle("dark");
+          localStorage.setItem("theme", isDark ? "dark" : "light");
+          lightIcon.classList.toggle("hidden", !isDark);
+          darkIcon.classList.toggle("hidden", isDark);
+        });
+      });
+    </script>
+  </body>
+</html>

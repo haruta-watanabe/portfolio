@@ -1,0 +1,25 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Hero from "../../components/Hero.astro";
+import About from "../../components/About.astro";
+import Skills from "../../components/Skills.astro";
+import ProjectsSection from '../../components/ProjectsSection.astro';
+import Certifications from '../../components/Certifications.astro';
+import Contact from '../../components/Contact.astro';
+import { ui } from "../../data/ui.ts";
+
+const lang = "en";
+---
+
+<BaseLayout>
+  <Hero
+    lang={lang}
+    catchphrase={ui[lang]["hero.catchphrase"]}
+    resumeText={ui[lang]["hero.button.resume"]}
+  />
+  <About lang={lang} />
+  <Skills />
+  <Certifications lang={lang} />
+  <ProjectsSection />
+  <Contact lang={lang} />
+</BaseLayout>

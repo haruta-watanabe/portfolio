@@ -1,0 +1,14 @@
+# Set default behavior to automatically handle line endings.
+# Check-in all text files as LF in the repository.
+* text=auto eol=lf
+
+# Files that should always have CRLF line endings.
+*.bat text eol=crlf
+
+# Declare files that should be treated as binary and left untouched.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.svg binary
+*.pdf binary

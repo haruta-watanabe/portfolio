@@ -1,0 +1,30 @@
+# ## Dependencies
+# Installed dependencies, such as node_modules
+node_modules/
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ## Astro
+# Astro auto-generated files and directories
+.astro/
+dist/
+
+# ## Environment Variables
+# Ignore environment variables, which may contain sensitive information
+.env
+.env.*
+!.env.example
+
+# ## Editor / IDE
+# VS Code specific files
+.vscode/
+
+# ## Operating System
+# macOS specific files
+.DS_Store
+# Windows specific files
+Thumbs.db
+
+# ## Log files
+*.log
