@@ -3,6 +3,7 @@ import { getCollection } from "astro:content";
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import Pagination from '../../../components/Pagination.astro';
 import type { GetStaticPathsOptions } from "astro";
+import { Image } from "astro:assets";
 
 export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
   const allPosts = await getCollection("blog", ({ id }) =>
@@ -15,9 +16,10 @@ export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
 }
 
 const { page } = Astro.props;
+const pageDescription = "渡邉朝太のブログ記事一覧です。";
 ---
 
-<BaseLayout>
+<BaseLayout description={pageDescription}>
   <div class="container mx-auto px-4 py-12 max-w-4xl">
     <h1 class="text-4xl font-bold text-center mb-12">Blog</h1>
     <ul class="space-y-12">
@@ -30,10 +32,11 @@ const { page } = Astro.props;
             >
               <div class="grid md:grid-cols-3 gap-6 items-center">
                 <div class="md:col-span-1">
-                  <img
+                  <Image
                     src={post.data.img}
                     alt={post.data.img_alt ?? ""}
                     class="rounded-lg shadow-lg w-full aspect-video object-cover transition-transform group-hover:scale-105"
+                    format="webp"
                   />
                 </div>
                 <div class="md:col-span-2">

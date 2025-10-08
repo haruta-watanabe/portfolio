@@ -2,9 +2,14 @@
 import { getCollection } from "astro:content";
 import ProjectCard from "./ProjectCard.astro";
 
+interface Props {
+  lang: 'ja' | 'en';
+}
+const { lang } = Astro.props;
+
 const projects = (
   await getCollection("projects", ({ id }) => {
-    return id.startsWith("ja/");
+    return id.startsWith(`${lang}/`);
   })
 )
   .sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf())

@@ -2,8 +2,8 @@
 title: "Portfolio Site"
 description: "This is my portfolio site, built to be modern and fast using Astro."
 publishDate: "2025-10-08"
-tags: ["HTML", "JS", "Astro", "Tailwind CSS"]
-img: "/assets/images/projects/portfolio_en.png"
+tags: ["HTML", "JS", "Astro", "Tailwind CSS", "AI"]
+img: "../../../assets/images/projects/portfolio_en.png"
 img_alt: "Screenshot of the portfolio site"
 ---
 

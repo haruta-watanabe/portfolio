@@ -3,7 +3,7 @@ title: "ポートフォリオサイトへようこそ！"
 description: "AstroとTailwind CSSを使って構築した、新しいポートフォリオサイトの紹介です。サイトの技術的な特徴や、今後の展望についてお話しします。"
 publishDate: "2025-10-08"
 tags: ["Astro", "Tailwind CSS", "サイト制作"]
-img: "/assets/images/blog/post-image-1.png"
+img: "../../../assets/images/blog/post-image-1.png"
 img_alt: "机の上のノートパソコン"
 ---
 

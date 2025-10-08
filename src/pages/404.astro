@@ -1,8 +1,9 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+const pageDescription = "The page you are looking for could not be found. Please check the URL and try again.";
 ---
 
-<BaseLayout>
+<BaseLayout description={pageDescription}>
   <div class="flex flex-col items-center justify-center text-center py-20">
     <h1 class="text-6xl md:text-8xl font-bold text-sky-600 dark:text-sky-400">
       404
