@@ -1,0 +1,50 @@
+---
+// src/components/VolunteerExperience.astro
+import { ui } from "../data/ui.ts";
+
+interface Props {
+  lang: keyof typeof ui;
+}
+const { lang = "ja" } = Astro.props;
+const t = ui[lang];
+
+// データ構造は変えず、テキストは辞書から取得する
+const experiences = [
+  {
+    role: t["volunteer.exp1.role"],
+    organization: t["volunteer.exp1.organization"],
+    period: t["volunteer.exp1.period"],
+    description: t["volunteer.exp1.description"],
+  },
+  {
+    role: t["volunteer.exp2.role"],
+    organization: t["volunteer.exp2.organization"],
+    period: t["volunteer.exp2.period"],
+    description: t["volunteer.exp2.description"],
+  },
+];
+---
+
+<section id="volunteer" class="mt-12">
+  <h2
+    class="text-2xl font-bold mb-4 border-b border-gray-200 dark:border-gray-700 pb-2"
+  >
+    {t["volunteer.title"]}
+  </h2>
+  <div class="space-y-6">
+    {
+      experiences.map((exp) => (
+        <div>
+          <h3 class="text-xl font-semibold">{exp.role}</h3>
+          <p class="font-medium text-gray-700 dark:text-gray-300">
+            {exp.organization}
+          </p>
+          <p class="text-sm text-gray-500 mt-1">{exp.period}</p>
+          <p class="mt-2 text-gray-600 dark:text-gray-400 leading-relaxed">
+            {exp.description}
+          </p>
+        </div>
+      ))
+    }
+  </div>
+</section>
