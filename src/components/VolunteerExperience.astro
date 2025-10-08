@@ -1,5 +1,4 @@
 ---
-// src/components/VolunteerExperience.astro
 import { ui } from "../data/ui.ts";
 
 interface Props {
@@ -8,7 +7,6 @@ interface Props {
 const { lang = "ja" } = Astro.props;
 const t = ui[lang];
 
-// データ構造は変えず、テキストは辞書から取得する
 const experiences = [
   {
     role: t["volunteer.exp1.role"],
