@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import Contact from '../../components/Contact.astro';
+import VolunteerExperience from '../../components/VolunteerExperience.astro';
 
 const lang = "ja";
 ---
@@ -22,6 +23,8 @@ const lang = "ja";
           将来的には、データサイエンティストやエンジニアとして、AI開発や企業の意思決定を支援し、価値あるインサイトを提供することを目指しています。新しい技術や方法論を学び続け、自己成長を追求しています。
         </p>
         <a href="/ja/resume" class="inline-block mt-8 text-blue-500 hover:underline font-bold">詳細な経歴はこちらをご覧ください。</a>
+        <hr />
+        <VolunteerExperience lang={lang} />
         <hr />
         <Contact lang={lang} />
       </div>
