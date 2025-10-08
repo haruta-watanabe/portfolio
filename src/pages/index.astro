@@ -5,6 +5,7 @@ import Analytics from "../components/Analytics.astro";
 
 const ja = ui.ja;
 const en = ui.en;
+const { description = "This is Haruta Watanabe's portfolio site. It showcases projects and skills related to data science and application development." } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -14,6 +15,7 @@ const en = ui.en;
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>Redirecting...</title>
+    <meta name="description" content={description} />
 
     <script is:inline>
       (function () {

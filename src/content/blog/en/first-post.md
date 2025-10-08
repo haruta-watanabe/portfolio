@@ -3,7 +3,7 @@ title: "Welcome to My Portfolio Site!"
 description: "An introduction to my new portfolio site, built with Astro and Tailwind CSS. I'll discuss the site's technical features and future plans."
 publishDate: "2025-10-08"
 tags: ["Astro", "Tailwind CSS", "Web Development"]
-img: "/assets/images/blog/post-image-1.png"
+img: "../../../assets/images/blog/post-image-1.png"
 img_alt: "A laptop on a desk"
 ---
 

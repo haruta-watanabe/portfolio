@@ -42,6 +42,7 @@ const { catchphrase, resumeText, lang } = Astro.props;
         <a
           href={`mailto:contact@harutawatanabe.com`}
           class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors p-3"
+          aria-label="Email to Haruta Watanabe"
         >
           <svg
             class="h-6 w-6"
@@ -58,6 +59,7 @@ const { catchphrase, resumeText, lang } = Astro.props;
           target="_blank"
           rel="noopener noreferrer"
           class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors p-3"
+          aria-label="GitHub profile of Haruta Watanabe"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -74,6 +76,7 @@ const { catchphrase, resumeText, lang } = Astro.props;
           target="_blank"
           rel="noopener noreferrer"
           class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors p-3"
+          aria-label="LinkedIn profile of Haruta Watanabe"
         >
           <svg
             class="h-6 w-6"
@@ -98,6 +101,8 @@ const { catchphrase, resumeText, lang } = Astro.props;
         src={me}
         alt="Haruta Watanabe"
         class="rounded-full w-64 h-64 md:w-80 md:h-80 object-cover shadow-lg"
+        loading="eager"
+        fetchpriority="high"
       />
     </div>
   </div>

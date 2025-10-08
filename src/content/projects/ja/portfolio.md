@@ -2,8 +2,8 @@
 title: "ポートフォリオサイト"
 description: "これは私のポートフォリオサイトです。Astroを使用してモダンかつ高速に構築しました。"
 publishDate: "2025-10-08"
-tags: ["HTML", "JS", "Astro", "Tailwind CSS"]
-img: "/assets/images/projects/portfolio_ja.png"
+tags: ["HTML", "JS", "Astro", "Tailwind CSS", "AI"]
+img: "../../../assets/images/projects/portfolio_ja.png"
 img_alt: "ポートフォリオサイトのスクリーンショット"
 ---
 
