@@ -11,6 +11,8 @@ img_alt: "Screenshot of the portfolio site"
 
 This site serves as my **online business card**, intended to showcase my skillset, project experience, and introduce myself. I pursued a **simple and modern design** so that visitors can intuitively find information, aiming for a site that conveys my **technical strengths** at a glance.
 
+The project is available [here](https://harutawatanabe.com).
+
 ---
 
 ### **Key Features**
