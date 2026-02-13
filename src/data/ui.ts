@@ -1,6 +1,6 @@
 export const ui = {
     ja: {
-        'hero.catchphrase': 'データとコードで課題を解決する、未来のデータサイエンティスト',
+        'hero.catchphrase': 'データとコードで課題を解決する、未来のソフトウェアエンジニア / データサイエンティスト',
         'hero.button.resume': '履歴書',
         'contact.title': 'お問い合わせ',
         'contact.body': 'お仕事のオファーやご質問など、お気軽にご連絡ください。',
@@ -33,7 +33,7 @@ export const ui = {
         'pagination.page': 'ページ',
         'about.description.1': '私はデータサイエンスとソフトウェアエンジニアリングに情熱を持つ学生です。データ分析、機械学習、プログラミングに関するスキルを習得、活用し、実世界の問題を解決することを目指しています。',
         'about.description.2': 'Python、やSQL、Dartなどのプログラミング言語を使用したアプリケーション開発の経験があります。また、チームでの協力やコミュニケーションも得意としています。',
-        'about.description.3': '将来的には、データサイエンティスト、エンジニアとしてAI作成や企業の意思決定を支援し、価値あるインサイトを提供することを目指しています。常に新しい技術や手法を学び続け、自己成長を追求しています。',
+        'about.description.3': '将来的には、ソフトウェアエンジニア、データサイエンティストとしてアプリケーション開発やAI作成や企業の意思決定を支援し、価値あるインサイトを提供することを目指しています。常に新しい技術や手法を学び続け、自己成長を追求しています。',
         'volunteer.title': '奉仕活動',
         'volunteer.exp1.role': '地域清掃活動',
         'volunteer.exp1.organization': '中央大学ローターアクトクラブ',
@@ -45,7 +45,7 @@ export const ui = {
         'volunteer.exp2.description': '東京中央ロータリークラブ主催のクリスマスチャリティーコンサートの運営をサポート。イベントの円滑な進行に貢献。',
     },
     en: {
-        'hero.catchphrase': 'A Future Data Scientist, Solving Problems with Data and Code.',
+        'hero.catchphrase': 'A Future Software Engineer / Data Scientist, Solving Problems with Data and Code.',
         'hero.button.resume': 'Resume',
         'contact.title': 'Get in Touch',
         'contact.body': 'Feel free to contact me regarding work offers or any questions you may have.',
@@ -78,7 +78,7 @@ export const ui = {
         'pagination.page': 'Page',
         'about.description.1': 'I am a student passionate about data science and software engineering. I aim to acquire and utilise skills in data analysis, machine learning, and programming to solve real-world problems.',
         'about.description.2': 'I have experience in application development using programming languages such as Python, SQL, and Dart. I am also skilled in teamwork and communication.',
-        'about.description.3': 'In the future, I aim to support AI development and corporate decision-making as a data scientist and engineer, delivering valuable insights. I continually pursue self-improvement by learning new technologies and methodologies.',
+        'about.description.3': 'In the future, I aim to support application development, AI creation, and corporate decision-making as a software engineer and data scientist, providing valuable insights. I continuously pursue self-improvement by learning new technologies and methodologies.',
         'volunteer.title': 'Volunteer Activities',
         'volunteer.exp1.role': 'Community Clean-Up Activities',
         'volunteer.exp1.organization': 'Chuo University Rotaract Club',
