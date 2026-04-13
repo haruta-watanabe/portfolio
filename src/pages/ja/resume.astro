@@ -4,7 +4,7 @@ import { Image } from "astro:assets";
 import me from "../../assets/me.png";
 import Contact from "../../components/Contact.astro";
 const lang = "ja";
-const pageDescription = "渡邉朝太の経歴について紹介します。";
+const pageDescription = "渡邉朝太の経歴についての紹介です。";
 ---
 
 <BaseLayout description={pageDescription}>
@@ -23,12 +23,12 @@ const pageDescription = "渡邉朝太の経歴について紹介します。";
             渡邉 朝太 (Haruta Watanabe)
           </h1>
           <p class="text-lg text-gray-600 dark:text-gray-300 mt-1">
-            未来のデータサイエンティスト
+            ソフトウェアエンジニア / データサイエンティスト
           </p>
         </div>
       </div>
       <a
-        href="/resume.pdf"
+        href="/resume_ja.pdf"
         target="_blank"
         class="bg-sky-600 hover:bg-sky-700 text-white font-bold py-3 px-6 rounded-lg transition-colors inline-flex items-center flex-shrink-0"
         download
@@ -52,37 +52,67 @@ const pageDescription = "渡邉朝太の経歴について紹介します。";
 
     <div class="prose dark:prose-invert max-w-none">
       <h2>サマリー</h2>
-      <p>AIや機械学習に強い関心を持つ法学部の学生です。</p>
       <p>
-        知人の会社でのアプリケーション開発や、個人でのアプリ開発を通じて、プログラミングスキルを磨いてきました。
+        AI、データサイエンス、およびソフトウェアエンジニアリングに強い関心を持つ法学部生です。
       </p>
       <p>
-        AI駆動での開発を主として行っていたため、AIやデータサイエンス、機械学習に対する興味が深まり、学習を開始しました。
+        実務を通じてプログラミングスキルを磨き、レガシーERPシステムのリプレイスやフルスタックアプリケーションの開発を成功させてきました。
       </p>
       <p>
-        現在学習中の身ではありますが、Python、SQL、機械学習ライブラリの知識を活かし、価値あるインサイトを提供することに貢献します。
+        RESTful
+        APIの構築、クロスプラットフォームのモバイルアプリ開発、堅牢なデータバリデーションシステムの構築を得意としています。Python、PostgreSQL、機械学習の知識を活用し、スケーラブルで効率的なソリューションの構築に尽力します。
       </p>
 
       <hr />
 
       <h2>職務経歴</h2>
+
       <div class="mb-6">
-        <h3>和丘株式会社 (2024年4月 – 現在)</h3>
-        <p class="font-medium">アプリケーション開発 (アルバイト)</p>
+        <h3>和丘株式会社 (2024年5月 – 現在)</h3>
+        <p class="font-medium">ソフトウェアエンジニア (アルバイト)</p>
         <ul>
-          <li>各種システム開発の支援を行う。</li>
           <li>
-            SQLを用いたデータ抽出や、Python、Java等でのシステム構築、HTML/CSS/JSを用いたMOCK作成を担当。
+            Python、Django、PostgreSQLを用いて、印刷会社向けのレガシーERPシステムのモダナイゼーションを主導。
+          </li>
+          <li>
+            JavaとPostgreSQLを用いて、ヘルスケア分野の資産追跡プラットフォームの機能を開発。
+          </li>
+          <li>
+            透明性を確保するため、JavaScriptを用いて地方自治体関連プロジェクト向けの議事録管理システムを開発。
           </li>
         </ul>
       </div>
+
       <div class="mb-6">
-        <h3>Choco Next Year For Sure (2025年6月 – 現在)</h3>
-        <p class="font-medium">アプリケーション開発</p>
+        <h3>株式会社ハウテレビジョン (2026年3月)</h3>
+        <p class="font-medium">
+          ソフトウェアエンジニア (インターン)
+        </p>
         <ul>
-          <li>ゲームや日常を豊かにするアプリケーションを開発。</li>
           <li>
-            主にFlutterとFirebaseを用いて、クロスプラットフォーム対応のアプリを構築。
+            FastAPIを用いてRESTful
+            APIを設計・実装し、非同期プログラミングを活用して同時ユーザーリクエストを効率的に処理。
+          </li>
+          <li>
+            FastAPI内でPythonの型ヒントとPydanticを活用し、堅牢なデータバリデーションを確保することで本番環境でのランタイムエラーを削減。
+          </li>
+        </ul>
+      </div>
+
+      <div class="mb-6">
+        <h3>Choco Next Year For Sure (個人事業主) (2025年5月 – 現在)</h3>
+        <p class="font-medium">創業者 兼 リードデベロッパー</p>
+        <ul>
+          <li>
+            個人事業を立ち上げ、部門横断的な開発チームを率いてフルスタックソリューションを提供。
+          </li>
+          <li>
+            FlutterとFirebaseを用いてクロスプラットフォーム対応のモバイルアプリを設計・展開し、製品のライフサイクル全体を管理。
+          </li>
+          <li>
+            AstroとTailwind
+            CSSを使用して高性能なWebプラットフォームを開発し、Core Web
+            VitalsとSEOを最適化。
           </li>
         </ul>
       </div>
@@ -90,8 +120,43 @@ const pageDescription = "渡邉朝太の経歴について紹介します。";
       <hr />
 
       <h2>学歴</h2>
-      <div>
-        <h3>中央大学 法学部 法律学科 (2028年3月 卒業予定)</h3>
+      <div class="mb-4">
+        <h3>中央大学 | 東京</h3>
+        <p>
+          <strong>法学部 法律学科</strong> | 2028年3月 卒業予定
+        </p>
+        <p>GPA: 3.48/4.0 (直近1年間のGPAは3.61/4.0と上昇傾向)</p>
+      </div>
+
+      <div class="mb-4">
+        <h3>東京大学 松尾・岩澤研究室 | フルリモート</h3>
+        <p>
+          <strong
+            >GCI (グローバル消費インテリジェンス寄付講座)
+            データサイエンス育成講座</strong
+          > | 2026年3月 修了
+        </p>
+        <ul>
+          <li>
+            Pythonを用いたデータサイエンスと機械学習の集中的なカリキュラムを修了。
+          </li>
+          <li>
+            NumPy、Pandas、Scikit-learnを用いた予測モデリングとデータ分析を習得。
+          </li>
+        </ul>
+      </div>
+
+      <div class="mb-4">
+        <h3>ハーバード大学 (edX経由) | フルリモート</h3>
+        <p>
+          <strong>CS50x: コンピュータサイエンス入門</strong> | 2026年1月 修了
+        </p>
+        <ul>
+          <li>データ構造、アルゴリズム、メモリ管理における基礎知識を習得。</li>
+          <li>
+            C、Python、SQL、JavaScriptを用いた複雑なプログラミング課題を完遂。
+          </li>
+        </ul>
       </div>
 
       <hr />
@@ -99,20 +164,16 @@ const pageDescription = "渡邉朝太の経歴について紹介します。";
       <h2>スキル</h2>
       <ul>
         <li>
-          <strong>Languages:</strong> Python, SQL, Java, Dart, JavaScript, HTML,
-          CSS
+          <strong>プログラミング言語:</strong> Python (Proficient), Java, Dart, JavaScript,
+          SQL (PostgreSQL), C, HTML/CSS
         </li>
         <li>
-          <strong>Libraries & Frameworks:</strong> Django, Flutter, Tailwind CSS,
-          Astro, Node.js
+          <strong>フレームワーク & テクノロジー:</strong> Django, FastAPI, Flutter,
+          Firebase, Astro, Tailwind CSS, Node.js, NumPy, Pandas, Scikit-learn
         </li>
         <li>
-          <strong>Tools & Platforms:</strong> Git, GitHub, GitHub Copilot, Firebase,
-          Google Gemini
-        </li>
-        <li>
-          <strong>Next to Learn:</strong> NumPy, PyTorch, TensorFlow, Pandas, Scikit-learn,
-          Docker, AWS
+          <strong>ツール & プラットフォーム:</strong> Git, GitHub, GitLab, Linux (WSL),
+          Docker, Google Cloud/Firebase
         </li>
       </ul>
       <hr />
