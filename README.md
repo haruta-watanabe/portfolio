@@ -5,7 +5,7 @@
 こちらは渡邉 朝太（Haruta Watanabe）のポートフォリオサイトのソースコードです。
 This is the source code for the portfolio website of Haruta Watanabe.
 
-**Live URL:** [https://harutawatanabe.com](https://harutawatanabe.com)
+**Live URL:** <a href="https://harutawatanabe.com" target="_blank" rel="noopener noreferrer">https://harutawatanabe.com</a>
 
 ---
 
@@ -19,12 +19,12 @@ This site serves as my online business card, designed to introduce my skills, pr
 
 ## 🛠️ 使用技術 / Tech Stack
 
-| カテゴリ (Category)         | 技術 (Technology)                 |
-| :------------------------- | --------------------------------  |
-| フレームワーク (Framework)  | Astro                             |
-| スタイリング (Styling)      | Tailwind CSS                      |
-| 言語 (Languages)           | TypeScript, HTML, CSS, JavaScript  |
-| デプロイ (Deployment)       | GitHub Pages                      |
+| カテゴリ (Category)        | 技術 (Technology)                 |
+| :------------------------- | --------------------------------- |
+| フレームワーク (Framework) | Astro                             |
+| スタイリング (Styling)     | Tailwind CSS                      |
+| 言語 (Languages)           | TypeScript, HTML, CSS, JavaScript |
+| デプロイ (Deployment)      | GitHub Pages                      |
 
 ---
 
@@ -75,7 +75,7 @@ To run this project in your local environment, follow the steps below.
 
 **ただし、リポジトリに含まれる以下のコンテンツは MIT ライセンスの対象外であり、すべての権利は作者である Haruta Watanabe が保有します。**
 
-- プロフィール写真を含む、すべての画像ファイル
+- youtube_social_icon_red.png以外のプロフィール写真を含む、すべての画像ファイル
 - プロジェクトの紹介文やブログ、自己紹介などのテキストコンテンツ
 
 ---
@@ -84,5 +84,5 @@ The source code of this website is licensed under the [MIT License](LICENSE). Se
 
 **However, the content included in this repository is NOT subject to the MIT License, and all rights are reserved by the author, Haruta Watanabe. This includes:**
 
-- All image files, including the profile photo.
+- All image files, including profile photos other than youtube_social_icon_red.png.
 - All text content, such as project descriptions, blogs and the "About Me" section.
