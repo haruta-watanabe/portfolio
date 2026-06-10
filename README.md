@@ -76,6 +76,7 @@ To run this project in your local environment, follow the steps below.
 **ただし、リポジトリに含まれる以下のコンテンツは MIT ライセンスの対象外であり、すべての権利は作者である Haruta Watanabe が保有します。**
 
 - youtube_social_icon_red.png以外のプロフィール写真を含む、すべての画像ファイル
+- **youtube_social_icon_red.pngの権利はGoogle LLCが所有します**
 - プロジェクトの紹介文やブログ、自己紹介などのテキストコンテンツ
 
 ---
@@ -85,4 +86,5 @@ The source code of this website is licensed under the [MIT License](LICENSE). Se
 **However, the content included in this repository is NOT subject to the MIT License, and all rights are reserved by the author, Haruta Watanabe. This includes:**
 
 - All image files, including profile photos other than youtube_social_icon_red.png.
+- **The rights to youtube_social_icon_red.png are owned by Google LLC.**
 - All text content, such as project descriptions, blogs and the "About Me" section.
