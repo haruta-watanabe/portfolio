@@ -27,7 +27,7 @@ const pageDescription = "This is a list of blog posts by Haruta Watanabe.";
         page.data.map((post) => (
           <li>
             <a
-              href={`/en/blog/${post.slug.replace("en/", "")}`}
+              href={`/en/blog/${post.id.replace("en/", "")}`}
               class="block group"
             >
               <div class="grid md:grid-cols-3 gap-6 items-center">

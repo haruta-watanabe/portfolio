@@ -27,7 +27,7 @@ const pageDescription = "渡邉朝太のブログ記事一覧です。";
         page.data.map((post) => (
           <li>
             <a
-              href={`/ja/blog/${post.slug.replace("ja/", "")}`}
+              href={`/ja/blog/${post.id.replace("ja/", "")}`}
               class="block group"
             >
               <div class="grid md:grid-cols-3 gap-6 items-center">

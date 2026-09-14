@@ -7,8 +7,8 @@ interface Props {
 }
 
 const { project } = Astro.props;
-const projectSlug = project.slug.replace(/^(en|ja)\//, "");
-const lang = project.slug.startsWith("en") ? "en" : "ja";
+const projectSlug = project.id.replace(/^(en|ja)\//, "");
+const lang = project.id.startsWith("en") ? "en" : "ja";
 ---
 
 <a

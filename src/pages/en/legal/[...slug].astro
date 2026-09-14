@@ -1,5 +1,5 @@
 ---
-import { getCollection, type CollectionEntry } from "astro:content";
+import { getCollection, render, type CollectionEntry } from "astro:content";
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 
 export async function getStaticPaths() {
@@ -7,7 +7,7 @@ export async function getStaticPaths() {
     id.startsWith("en/")
   );
   return legalPages.map((page) => ({
-    params: { slug: page.slug.replace("en/", "") },
+    params: { slug: page.id.replace("en/", "") },
     props: { page },
   }));
 }
@@ -16,7 +16,7 @@ type Props = {
   page: CollectionEntry<"legal">;
 };
 const { page } = Astro.props;
-const { Content } = await page.render();
+const { Content } = await render(page);
 const pageDescription = "This is the legal information page of Haruta Watanabe's portfolio site.";
 ---
 
