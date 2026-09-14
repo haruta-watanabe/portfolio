@@ -1,5 +1,5 @@
 ---
-import { getCollection, type CollectionEntry } from "astro:content";
+import { getCollection, render, type CollectionEntry } from "astro:content";
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 
 export async function getStaticPaths() {
@@ -7,7 +7,7 @@ export async function getStaticPaths() {
     id.startsWith("ja/")
   );
   return legalPages.map((page) => ({
-    params: { slug: page.slug.replace("ja/", "") },
+    params: { slug: page.id.replace("ja/", "") },
     props: { page },
   }));
 }
@@ -16,7 +16,7 @@ type Props = {
   page: CollectionEntry<"legal">;
 };
 const { page } = Astro.props;
-const { Content } = await page.render();
+const { Content } = await render(page);
 const pageDescription = "渡邉朝太のポートフォリオサイトの法的情報です。";
 ---
 
